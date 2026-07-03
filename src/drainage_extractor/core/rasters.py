@@ -133,3 +133,5 @@ def check_memory_budget(required_bytes: int, what: str, hard_fraction: float = 0
         return [
             f"{what} will use about {required_bytes / 1e9:.1f} GB of the "
             f"{avail / 1e9:.1f} GB currently free — expect heavy memory pressure."
+        ]
+    return []
