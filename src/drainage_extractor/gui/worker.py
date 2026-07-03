@@ -10,8 +10,9 @@ from __future__ import annotations
 import logging
 import threading
 import traceback
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from PySide6.QtCore import QThread, Signal
 

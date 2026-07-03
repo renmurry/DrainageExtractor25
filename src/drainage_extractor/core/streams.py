@@ -15,7 +15,6 @@ result into a GeoDataFrame of polylines with attributes:
 from __future__ import annotations
 
 import logging
-import math
 from dataclasses import dataclass, field
 
 import geopandas as gpd

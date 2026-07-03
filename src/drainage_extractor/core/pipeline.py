@@ -10,9 +10,9 @@ from __future__ import annotations
 import logging
 import tempfile
 import time
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable
 
 import geopandas as gpd
 import numpy as np

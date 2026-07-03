@@ -25,7 +25,7 @@ def setup_logging(verbose: bool = False) -> Path:
     """
     root = logging.getLogger()
     if getattr(setup_logging, "_configured", False):
-        return getattr(setup_logging, "_logfile")  # type: ignore[return-value]
+        return setup_logging._logfile  # type: ignore[return-value]
 
     log_dir = log_directory()
     log_dir.mkdir(parents=True, exist_ok=True)

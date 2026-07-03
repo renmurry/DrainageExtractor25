@@ -13,8 +13,8 @@ from __future__ import annotations
 import heapq
 import logging
 from collections import deque
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable
 
 import numpy as np
 import rasterio
@@ -84,7 +84,7 @@ def fill_depressions_array(
     seeds = valid & (edge | interior_touching)
 
     heap: list[tuple[float, int, int]] = [
-        (float(z[r, c]), int(r), int(c)) for r, c in zip(*np.nonzero(seeds))
+        (float(z[r, c]), int(r), int(c)) for r, c in zip(*np.nonzero(seeds), strict=True)
     ]
     heapq.heapify(heap)
     visited[seeds] = True

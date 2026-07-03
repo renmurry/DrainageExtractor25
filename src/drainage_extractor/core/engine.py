@@ -24,8 +24,8 @@ import shutil
 import subprocess
 import sys
 from abc import ABC, abstractmethod
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable
 
 from drainage_extractor.core.errors import EngineError, PipelineCancelled
 

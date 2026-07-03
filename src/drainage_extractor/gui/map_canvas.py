@@ -89,7 +89,7 @@ class MapCanvas(QGraphicsView):
             return
 
         paths: dict[int, QPainterPath] = {}
-        for order, geom in zip(gdf["order"].astype(int), gdf.geometry):
+        for order, geom in zip(gdf["order"].astype(int), gdf.geometry, strict=True):
             path = paths.setdefault(order, QPainterPath())
             coords = list(geom.coords)
             path.moveTo(self._to_scene(*coords[0][:2]))
