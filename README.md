@@ -54,18 +54,6 @@ ArcGIS/QGIS required.
 
 ## Quickstart
 
-```bash
-git clone https://github.com/renmurry/DrainageExtractor25.git
-cd DrainageExtractor25
-python -m venv .venv && . .venv/bin/activate    # Windows: .venv\Scripts\activate
-pip install -e .
-
-# recommended: fetch the WhiteboxTools binary (~10 MB) for fast hydrology + breaching
-python scripts/fetch_whitebox.py
-
-drainage-extractor                # or: python -m drainage_extractor
-```
-
 Then drop `examples/sample_dem.tif` onto the window, click **Extract
 network**, and **Export…** it as a GeoPackage.
 
